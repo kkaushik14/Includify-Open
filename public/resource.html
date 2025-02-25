@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/heroicons@2.0.16/dist/outline/academic-cap.svg"></script>
+    <link rel="shortcut icon" href="/img/favicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="resource.css">
+    <title>Resource | Includify - Empowering Through Inclusion</title>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="resources.html" class="text-2xl font-bold text-[#3f4243]">Includify</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-[#3f4243]">Home</a>
+                    <a href="jobs.html" class="text-gray-600 hover:text-[#3f4243]">Jobs</a>
+                    <a href="#" class="text-gray-600 hover:text-[#3f4243]">About us</a>
+                    <a href="#" class="text-gray-600 hover:text-[#3f4243]">Contact</a>
+                    <div id="google_element" class="gt-gog"></div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-600">Home</a>
+                <a href="jobs.html" class="block px-3 py-2 text-gray-600">Jobs</a>
+                <a href="#" class="block px-3 py-2 text-gray-600">About us</a>
+                <a href="#" class="block px-3 py-2 text-gray-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="gradient-bg text-white py-20 mt-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Empowering Through Inclusion</h1>
+                    <p class="text-xl mb-8">Connecting disabled and low-income individuals with opportunities for growth</p>
+                    <a href="#sab-sax">
+                        <a href="#sab-sax">
+                            <button class="bg-white text-[#3f4243] px-8 py-3 rounded-lg hover:bg-gray-100 font-semibold">Get    Started</button>
+                        </a>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+            <!-- Main Section -->
+    <div id="mainContent" class="max-w-7xl mx-auto px-4 py-8">
+        <section id="resources" class="py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-[#3f4243]" id="sab-sax">Educational Resources</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Primary Education Card -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-md card-hover">
+                        <div class="text-2xl mb-4"><i class="bi bi-book"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">Primary Education</h3>
+                        <p class="text-gray-100 mb-4">Access fundamental learning resources and support for primary education.</p>
+                        <button onclick="showEducationLevel('primary')" class="text-[#f8fafc] font-medium hover:underline">Learn More →</button>
+                    </div>
+
+                    <!-- Secondary Education Card -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-md card-hover">
+                        <div class="text-2xl mb-4"><i class="bi bi-journal-text"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">Secondary Education</h3>
+                        <p class="text-gray-100 mb-4">Discover resources for secondary education and skill development.</p>
+                        <button onclick="showEducationLevel('secondary')" class="text-[#f8fafc] font-medium hover:underline">Learn More →</button>
+                    </div>
+
+                    <!-- Higher Education Card -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-md card-hover">
+                        <div class="text-2xl mb-4"><i class="bi bi-mortarboard"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">Higher Education</h3>
+                        <p class="text-gray-100 mb-4">Discover resources for higher education and skill development.</p>
+                        <button onclick="showEducationLevel('higher')" class="text-[#f8fafc] font-medium hover:underline">Learn More →</button>
+                    </div>
+
+                    <!-- Scholarships Card -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-md card-hover">
+                        <div class="text-2xl mb-4"><i class="bi bi-award"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">Scholarships</h3>
+                        <p class="text-gray-100 mb-4">Find scholarships and financial aid opportunities for your education.</p>
+                        <button onclick="showScholarships()" class="text-[#f8fafc] font-medium hover:underline">Learn More →</button>
+                    </div>
+
+                    <!-- Government Exams Card -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-md card-hover">
+                        <div class="text-2xl mb-4"><i class="bi bi-journal-check"></i></div>
+                        <h3 class="text-xl font-semibold mb-3">Government Exams</h3>
+                        <p class="text-gray-100 mb-4">Explore resources and guidance for government exam preparation.</p>
+                        <button onclick="showGovtExams()" class="text-[#f8fafc] font-medium hover:underline">Learn More →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Content Section -->
+        <div id="educationContent" class="hidden mt-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div id="classSelection" class="mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Select Class</h3>
+                    <select id="classDropdown" class="w-full p-2 border rounded" onchange="showSubjects()">
+                        <option value="">Choose a class</option>
+                    </select>
+                </div>
+                
+                <div id="subjectSelection" class="hidden mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Select Subject</h3>
+                    <select id="subjectDropdown" class="w-full p-2 border rounded" onchange="showVideos()">
+                        <option value="">Choose a subject</option>
+                    </select>
+                </div>
+
+                <div id="videoContent" class="hidden">
+                    <h3 class="text-xl font-semibold mb-4">Educational Videos</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4l2thi5_84o?si=m16V7L82OqkPmMEy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/IV4IUsholjg?si=RYMsAp-_pT55KRda" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/PUB0TaZ7bhA?si=nif69bgyLnVZkq13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scholarships Content -->
+        <div id="scholarshipContent" class="hidden mt-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-6">Available Scholarships</h3>
+                
+                <div class="mb-8">
+                    <h4 class="text-xl font-semibold mb-4">Government Scholarships</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-4 border rounded-lg">
+                            <h5 class="font-semibold">National Scholarship Portal</h5>
+                            <p class="text-gray-600">Central government scholarships for all students</p>
+                            <a href="https://scholarships.gov.in/" target="_blank" class="text-blue-600 hover:underline">Apply Now</a>
+                        </div>
+                        <div class="p-4 border rounded-lg">
+                            <h5 class="font-semibold">State Merit Scholarship</h5>
+                            <p class="text-gray-600">State-specific merit-based scholarships</p>
+                            <a href="https://ssp.postmatric.karnataka.gov.in/" target="_blank" class="text-blue-600 hover:underline">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Private Organizations</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-4 border rounded-lg">
+                            <h5 class="font-semibold">Tata Scholarships</h5>
+                            <p class="text-gray-600">Merit-based scholarships for engineering students</p>
+                            <a href="https://www.tatatrusts.org/our-work/individual-grants-programme/education-grants" class="text-blue-600 hover:underline" target="_blank">Apply Now</a>
+                        </div>
+                        <div class="p-4 border rounded-lg">
+                            <h5 class="font-semibold">Google Scholarships</h5>
+                            <p class="text-gray-600">Technical education support for students</p>
+                            <a href="https://buildyourfuture.withgoogle.com/scholarships" class="text-blue-600 hover:underline" target="_blank">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Government Exams Content -->
+        <div id="govtExamsContent" class="hidden mt-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-6">Government Examination Resources</h3>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-4 border rounded-lg">
+                        <h4 class="font-semibold mb-2">UPSC</h4>
+                        <p class="text-gray-600 mb-2">Civil Services Examination</p>
+                        <a href="https://upsc.gov.in/" target="_blank" class="text-blue-600 hover:underline">View Resources</a>
+                    </div>
+                    <div class="p-4 border rounded-lg">
+                        <h4 class="font-semibold mb-2">SSC</h4>
+                        <p class="text-gray-600 mb-2">Staff Selection Commission</p>
+                        <a href="https://ssc.gov.in/" target="_blank" class="text-blue-600 hover:underline">View Resources</a>
+                    </div>
+                    <div class="p-4 border rounded-lg">
+                        <h4 class="font-semibold mb-2">Banking Exams</h4>
+                        <p class="text-gray-600 mb-2">IBPS, SBI, RBI</p>
+                        <a href="https://www.ibps.in/" target="_blank" class="text-blue-600 hover:underline">View Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#3f4243] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Includify</h3>
+                    <p class="text-gray-300">Empowering through inclusion and opportunity.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2024 Includify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+        function loadGoogleTranslate() {
+            new google.translate.TranslateElement(
+                "google_element"
+            );
+        }
+    </script>
+    <script src="resource.js"></script>
+</body>
+</html>

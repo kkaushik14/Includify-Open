@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job - Includify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-['Poppins']">
+    <nav class="bg-white shadow-md w-full mb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-[#3f4243]">Includify</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h1 class="text-3xl font-bold text-[#3f4243] text-center mb-8">Post a New Job</h1>
+            
+            <form id="jobForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2" for="companyName">Company Name *</label>
+                        <input type="text" id="companyName" required 
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#3f4243] focus:border-transparent">
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2" for="jobTitle">Job Title *</label>
+                        <input type="text" id="jobTitle" required 
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#3f4243] focus:border-transparent">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2" for="location">Location *</label>
+                        <input type="text" id="location" required 
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#3f4243] focus:border-transparent">
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Salary Range (Annual) *</label>
+                        <div class="flex gap-4">
+                            <input type="number" id="salaryMin" placeholder="Min" required 
+                                class="w-1/2 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#3f4243] focus:border-transparent">
+                            <input type="number" id="salaryMax" placeholder="Max" required 
+                                class="w-1/2 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#3f4243] focus:border-transparent">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="description">Job Description *</label>
+                    <textarea id="description" required rows="4" 
+                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#3f4243] focus:border-transparent"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="requirements">Requirements *</label>
+                    <textarea id="requirements" required rows="4" 
+                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#3f4243] focus:border-transparent"></textarea>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Employment Type *</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="radio" name="employmentType" value="fullTime" required class="mr-2">
+                                Full-time
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="employmentType" value="partTime" required class="mr-2">
+                                Part-time
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="employmentType" value="contract" required class="mr-2">
+                                Contract
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Suitable for People with Disabilities? *</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="radio" name="disabilityFriendly" value="yes" required class="mr-2">
+                                Yes
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="disabilityFriendly" value="no" required class="mr-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accommodationsField" class="hidden">
+                    <label class="block text-gray-700 font-medium mb-2">Available Accommodations *</label>
+                    <textarea id="accommodations" rows="4" 
+                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#3f4243] focus:border-transparent"
+                        placeholder="Please specify the accommodations available for people with disabilities..."></textarea>
+                </div>
+
+                <div class="flex justify-center pt-6">
+                    <button type="submit" 
+                        class="bg-[#3f4243] text-white px-8 py-3 rounded-lg hover:bg-[#2a2b2c] transition duration-300 transform hover:scale-105">
+                        Post Job <i class="bi bi-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+        <!-- Footer -->
+        <footer class="bg-[#3f4243] text-white py-12">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Includify</h3>
+                        <p class="text-gray-300">Empowering through inclusion and opportunity.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Resources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-white">Help Center</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white">Blog</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                    <p class="text-gray-300">© 2024 Includify. All rights reserved.</p>
+                </div>
+            </div>
+
+        <script src="employer.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="job.css">
+    <title>Jobs | Includify - Empowering Through Inclusion</title>
+    <style>
+        .job-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-[#3f4243]">Includify</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-[#3f4243]">Home</a>
+                    <a href="resources.html" class="text-gray-600 hover:text-[#3f4243]" target="_blank">Resources</a>
+                    <a href="jobs.html" class="text-gray-600 hover:text-[#3f4243]">About us</a>
+                    <a href="jobs.html" class="text-gray-600 hover:text-[#3f4243]">Contact</a>
+                    <div id="google_element" class="gt-gog"></div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600"><i class="bi bi-list text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-600">Home</a>
+                <a href="jobs.html" class="block px-3 py-2 text-gray-600">Jobs</a>
+                <a href="resources.html" class="block px-3 py-2 text-gray-600 rounded-lg mt-2">Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <form id="jobSearchForm" class="job-ser-form">
+            <label for="companyName"></label>
+            <input type="search" id="companyName" name="companyName">
+    
+            <button type="submit">Search</button>
+        </form>
+    
+        <div id="jobList" class="job-lst"></div>
+
+        <!-- Job Selection Section -->
+        <div id="jobList" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <!-- Gardener Job Card -->
+            <div class="job-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1590845947676-1b2c556e4a2b" 
+                             alt="Gardener" 
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Gardener</h3>
+                            <p class="text-gray-600">Green Landscapes Inc.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-gray-600"><i class="bi bi-geo-alt mr-2"></i>Mumbai, Maharashtra</p>
+                        <p class="text-gray-600"><i class="bi bi-currency-rupee mr-2"></i>15,000 - 20,000/month</p>
+                        <p class="text-gray-600"><i class="bi bi-clock mr-2"></i>Full Time</p>
+                        <p class="text-sm text-gray-500 mt-4">Looking for experienced gardener for maintaining corporate gardens and landscapes.</p>
+                    </div>
+                    <button class="mt-6 w-full bg-[#3f4243] text-white py-2 rounded-lg hover:bg-[#2d2e2f] transition-colors">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Helper Job Card -->
+            <div class="job-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1582578598774-a377d4b32223" 
+                             alt="Helper" 
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Office Helper</h3>
+                            <p class="text-gray-600">Corporate Solutions Ltd.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-gray-600"><i class="bi bi-geo-alt mr-2"></i>Delhi, NCR</p>
+                        <p class="text-gray-600"><i class="bi bi-currency-rupee mr-2"></i>12,000 - 15,000/month</p>
+                        <p class="text-gray-600"><i class="bi bi-clock mr-2"></i>Full Time</p>
+                        <p class="text-sm text-gray-500 mt-4">We are hiring office helpers for general maintenance and support work.</p>
+                    </div>
+                    <button class="mt-6 w-full bg-[#3f4243] text-white py-2 rounded-lg hover:bg-[#2d2e2f] transition-colors">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- IT Job Card -->
+            <div class="job-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" 
+                             alt="IT Professional" 
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">IT Support</h3>
+                            <p class="text-gray-600">TechCare Solutions</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-gray-600"><i class="bi bi-geo-alt mr-2"></i>Bangalore, Karnataka</p>
+                        <p class="text-gray-600"><i class="bi bi-currency-rupee mr-2"></i>25,000 - 35,000/month</p>
+                        <p class="text-gray-600"><i class="bi bi-clock mr-2"></i>Full Time</p>
+                        <p class="text-sm text-gray-500 mt-4">Entry-level IT support position for hardware and software troubleshooting.</p>
+                    </div>
+                    <button class="mt-6 w-full bg-[#3f4243] text-white py-2 rounded-lg hover:bg-[#2d2e2f] transition-colors">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as previous version) -->
+    <footer class="bg-[#3f4243] text-white py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Includify</h3>
+                    <p class="text-gray-300">Empowering through inclusion and opportunity.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2024 Includify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+        function loadGoogleTranslate() {
+            new google.translate.TranslateElement(
+                "google_element"
+            );
+        }
+    </script>
+    <script src="job.js"></script>
+</body>
+</html>

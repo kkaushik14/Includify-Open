@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Includify - Candidate Listings</title>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Same Navbar as index.html -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <!-- ... (same navbar code) ... -->
+    </nav>
+
+    <main class="flex-1 pt-20 pb-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <h1 class="text-3xl font-bold text-[#3f4243] mb-8">Available Candidates</h1>
+            
+            <!-- Search and Filter Section -->
+            <div class="mb-8 flex flex-wrap gap-4">
+                <input type="text" placeholder="Search by skills, location..." 
+                    class="flex-1 min-w-[200px] p-3 border rounded-lg">
+                <select class="p-3 border rounded-lg min-w-[150px]">
+                    <option>Filter by Location</option>
+                    <option>Remote</option>
+                    <option>On-site</option>
+                    <option>Hybrid</option>
+                </select>
+                <select class="p-3 border rounded-lg min-w-[150px]">
+                    <option>Experience Level</option>
+                    <option>Entry Level</option>
+                    <option>Mid Level</option>
+                    <option>Senior Level</option>
+                </select>
+            </div>
+
+            <!-- Candidate Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="candidateGrid">
+                <!-- Candidate cards will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Same Footer as index.html -->
+    <footer class="bg-[#3f4243] text-white py-12">
+        <!-- ... (same footer code) ... -->
+    </footer>
+
+    <script src="to-hire.js"></script>
+</body>
+</html>

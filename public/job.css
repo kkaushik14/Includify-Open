@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    margin: 20px;
+    background-color: #f2f2f280;
+    font-family: 'Poppins', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #3f4243 0%, #2a2b2c 100%);
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FF385C;
+    font-weight: 800;
+    font-family: "Bona Nova SC", serif;
+}
+
+.job-ser-form {
+    /* max-width: 80vw; */
+    height: 20vh;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-color: #ffffff15;
+    /* padding: 20px; */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Bona Nova SC", serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+input[type="search"] {
+    width: 40vw;
+    height: 45px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 10vw;
+    height: 55px;
+    background-color: #6fb8e6;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 22px;
+    border-radius: 8px;
+    border: none;
+}
+
+button[type="submit"]:hover {
+    background-color: #0d70ad;
+    transition: all ease 0.8s;
+}
+
+.job-lst {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.jobs {
+    background-color: #6fb8e6;
+    color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.jobs h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.jobs p {
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 600px) {
+    #hospitalSearchForm {
+        padding: 15px;
+    }
+}

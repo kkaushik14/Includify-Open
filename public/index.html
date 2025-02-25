@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includify - Empowering Through Inclusion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/img/favicon.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .skeleton-loader {
+            background: #eee;
+            border-radius: 4px;
+            animation: pulse 1.5s infinite;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #3f4243 0%, #2a2b2c 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-[#3f4243]">Includify</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-[#3f4243]">Home</a>
+                    <a href="job.html" class="text-gray-600 hover:text-[#3f4243]">Jobs</a>
+                    <a href="resource.html" class="text-gray-600 hover:text-[#3f4243]">Resources</a>
+                    <a href="#blogs" class="text-gray-600 hover:text-[#3f4243]">Blogs</a>
+                    <a href="account.html"><button class="bg-[#3f4243] text-white px-4 py-2 rounded-lg hover:bg-[#2a2b2c]">Login</button></a>
+                    <button class="border border-[#3f4243] text-[#3f4243] px-4 py-2 rounded-lg hover:bg-[#3f4243] hover:text-white"><a href="login.html">Sign Up</a></button>
+                    <div id="google_element" class="gt-gog flex"></div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600"><i class="bi bi-list text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-600">Home</a>
+                <a href="jobs.html" class="block px-3 py-2 text-gray-600">Jobs</a>
+                <a href="resources.html" class="block px-3 py-2 text-gray-600">Resources</a>
+                <a href="#blogs" class="block px-3 py-2 text-gray-600">Blogs</a>
+                <button class="block w-full text-left px-3 py-2 bg-[#3f4243] text-white rounded-lg mt-2">Login</button>
+                <!-- <button class="block w-full text-left px-3 py-2 border border-[#3f4243] text-[#3f4243] rounded-lg mt-2">Sign Up</button> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Empowering Through Inclusion</h1>
+                    <p class="text-lg mb-8">Connecting disabled and low-income individuals with meaningful employment opportunities and educational resources.</p>
+                    <a href="#set-go">
+                        <button class="bg-white text-[#3f4243] px-6 py-3 rounded-lg font-medium hover:bg-gray-100">Get Started</button>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/widecanvas-d0dd4.appspot.com/o/additional-images%2Fpersonalportfolio-free-template.jpg?alt=media&token=931534e1-57d3-4bab-89c2-7d58034ea0ab" alt="Inclusivity" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Type Cards Section -->
+    <section id="paths" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#3f4243]" id="set-go">Choose Your Path</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Disabled Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="text-center mb-6">
+                        <i class="bi bi-person-heart text-5xl text-[#3f4243]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Disabled</h3>
+                    <p class="text-gray-600 text-center mb-6">Find inclusive opportunities tailored to your needs.</p>
+                    <div class="text-center">
+                        <button onclick="showModal('disabled-modal')" class="bg-[#3f4243] text-white px-6 py-2 rounded-lg hover:bg-[#2a2b2c] transition-colors">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Low Income Group Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="text-center mb-6">
+                        <i class="bi bi-people text-5xl text-[#3f4243]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Low Income Group</h3>
+                    <p class="text-gray-600 text-center mb-6">Access opportunities to improve your situation.</p>
+                    <div class="text-center">
+                        <button onclick="showModal('low-income-modal')" class="bg-[#3f4243] text-white px-6 py-2 rounded-lg hover:bg-[#2a2b2c] transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Employer Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="text-center mb-6">
+                        <i class="bi bi-building text-5xl text-[#3f4243]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Employer</h3>
+                    <p class="text-gray-600 text-center mb-6">Create an inclusive workplace.</p>
+                    <div class="text-center">
+                        <a href="employer.html">
+                            <button class="bg-[#3f4243] text-white px-6 py-2 rounded-lg hover:bg-[#2a2b2c] transition-colors">
+                                Post Jobs
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disabled Modal -->
+    <div id="disabled-modal" class="modal">
+        <div class="bg-white max-w-4xl mx-auto mt-20 rounded-xl p-8 relative">
+            <button onclick="hideModal('disabled-modal')" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900">
+                <i class="bi bi-x-lg text-2xl"></i>
+            </button>
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#3f4243]">Resources for Disabled Individuals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Education Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border border-gray-200">
+                    <div class="text-center mb-6">
+                        <i class="bi bi-book text-5xl text-[#3f4243]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Education</h3>
+                    <p class="text-gray-600 text-center mb-6">Access specialized educational resources.</p>
+                    <ul class="text-gray-600 mb-6 space-y-2">
+                        <li><i class="bi bi-check2-circle"></i> Online Courses</li>
+                        <li><i class="bi bi-check2-circle"></i> Skill Development</li>
+                        <li><i class="bi bi-check2-circle"></i> Career Guidance</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="resource.html">
+                            <button class="bg-[#3f4243] text-white px-6 py-2 rounded-lg hover:bg-[#2a2b2c] transition-colors">
+                                Explore Education
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jobs Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border border-gray-200">
+                    <div class="text-center mb-6">
+                        <i class="bi bi-briefcase text-5xl text-[#3f4243]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Jobs</h3>
+                    <p class="text-gray-600 text-center mb-6">Find inclusive employment opportunities.</p>
+                    <ul class="text-gray-600 mb-6 space-y-2">
+                        <li><i class="bi bi-check2-circle"></i> Job Listings</li>
+                        <li><i class="bi bi-check2-circle"></i> Resume Builder</li>
+                        <li><i class="bi bi-check2-circle"></i> Interview Tips</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="job.html">
+                            <button class="bg-[#3f4243] text-white px-6 py-2 rounded-lg hover:bg-[#2a2b2c] transition-colors">
+                                Find Jobs
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Low Income Modal -->
+    <div id="low-income-modal" class="modal">
+        <div class="bg-white max-w-4xl mx-auto mt-20 rounded-xl p-8 relative">
+            <button onclick="hideModal('low-income-modal')" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900">
+                <i class="bi bi-x-lg text-2xl"></i>
+            </button>
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#3f4243]">Resources for Low Income Group</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Education Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border border-gray-200">
+                    <div class="text-center mb-6">
+                        <i class="bi bi-book text-5xl text-[#3f4243]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Education</h3>
+                    <p class="text-gray-600 text-center mb-6">Access specialized educational resources.</p>
+                    <ul class="text-gray-600 mb-6 space-y-2">
+                        <li><i class="bi bi-check2-circle"></i> Online Courses</li>
+                        <li><i class="bi bi-check2-circle"></i> Skill Development</li>
+                        <li><i class="bi bi-check2-circle"></i> Career Guidance</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="resource.html">
+                            <button class="bg-[#3f4243] text-white px-6 py-2 rounded-lg hover:bg-[#2a2b2c] transition-colors">
+                                Explore Education
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jobs Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border border-gray-200">
+                    <div class="text-center mb-6">
+                        <i class="bi bi-briefcase text-5xl text-[#3f4243]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Jobs</h3>
+                    <p class="text-gray-600 text-center mb-6">Find inclusive employment opportunities.</p>
+                    <ul class="text-gray-600 mb-6 space-y-2">
+                        <li><i class="bi bi-check2-circle"></i> Job Listings</li>
+                        <li><i class="bi bi-check2-circle"></i> Resume Builder</li>
+                        <li><i class="bi bi-check2-circle"></i> Interview Tips</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="job.html">
+                            <button class="bg-[#3f4243] text-white px-6 py-2 rounded-lg hover:bg-[#2a2b2c] transition-colors">
+                                Find Jobs
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Section -->
+    <section id="blogs" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#3f4243]">Latest Blogs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Blog Cards -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952" alt="Blog" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Success Stories: Breaking Barriers</h3>
+                        <p class="text-gray-600 mb-4">Inspiring stories of individuals who overcame challenges.</p>
+                        <button class="text-[#3f4243] font-medium hover:underline">Read More →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Blog" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Inclusive Workplace Guide</h3>
+                        <p class="text-gray-600 mb-4">Creating an environment where everyone can thrive.</p>
+                        <button class="text-[#3f4243] font-medium hover:underline">Read More →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Blog" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Skills for Tomorrow</h3>
+                        <p class="text-gray-600 mb-4">Essential skills for the future workforce.</p>
+                        <button class="text-[#3f4243] font-medium hover:underline">Read More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#3f4243] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Includify</h3>
+                    <p class="text-gray-300">Empowering through inclusion and opportunity.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2024 Includify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+        function loadGoogleTranslate() {
+            new google.translate.TranslateElement(
+                "google_element"
+            );
+        }
+    </script>
+    
+</body>
+</html>
