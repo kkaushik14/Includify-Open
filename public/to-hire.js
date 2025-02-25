@@ -10,6 +10,16 @@ const candidates = [
         disability: "Visual Impairment",
         location: "Remote"
     },
+    {
+        name: "Kumar Kaushik",
+        image: "https://www.shutterstock.com/image-illustration/cool-anime-guy-casual-outfit-600nw-2258372411.jpg",
+        role: "Frontend Developer",
+        experience: "2 years",
+        skills: ["HTML", "CSS", "JavaScript", "React", "NodeJS", "ExpressJS"],
+        salary : "$60,000 - $80,000",
+        disability: "Visual Impairment",
+        location: "Remote"
+    },
 ];
 
 function createCandidateCards() {
@@ -44,5 +54,4 @@ function createCandidateCards() {
     });
 }
 
-// Initialize the page
 document.addEventListener('DOMContentLoaded', createCandidateCards);

@@ -86,6 +86,9 @@ function showVideos() {
     const videoContainer = videoContent.querySelector('.grid');
     videoContainer.innerHTML = '';
 
+    const subjectName = document.getElementById('subjectName');
+    subjectName.textContent = `${selectedSubject} videos`;
+
     // Sample video data
     const sampleVideos = [
         { title: `${selectedSubject} - Chapter 1`, duration: "10:25" },
