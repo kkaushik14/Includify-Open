@@ -1,14 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
     
-    if(mobileMenu && mobileMenuButton) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }
-});
+if(mobileMenu && mobileMenuButton) {
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+}
 
 function showModal(modalId) {
     document.getElementById(modalId).style.display = 'block';
@@ -20,12 +18,10 @@ function hideModal(modalId) {
     document.body.style.overflow = 'auto';
 }
 
-document.querySelectorAll('.modal').forEach(modal => {
-    modal.addEventListener('click', function(e) {
-        if (e.target.classList.contain('modal')) {
-            hideModal(this.id);
-        }
-    });
+document.addEventListener('click', (e) => {
+    if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+    }
 });
 
 // Smooth scrolling
