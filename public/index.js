@@ -1,4 +1,4 @@
-alert("Website is under maintenance");
+alert("Website is under maintenance, but you can see!");
 // Mobile menu toggle
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
