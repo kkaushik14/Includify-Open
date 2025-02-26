@@ -60,7 +60,7 @@ input[type="search"] {
     box-sizing: border-box;
 }
 
-button[type="submit"] {
+/* button[type="submit"] {
     width: 10vw;
     height: 55px;
     background-color: #6fb8e6;
@@ -75,7 +75,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0d70ad;
     transition: all ease 0.8s;
-}
+} */
 
 .job-lst {
     max-width: 800px;
