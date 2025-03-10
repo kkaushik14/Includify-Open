@@ -75,30 +75,32 @@
     </div>
 
     <!-- Signup Page -->
-    <div id="signupPage" class="min-h-screen flex items-center justify-center">
-      <div class="glass-effect p-8 rounded-lg shadow-xl w-full max-w-md">
-        <h2 class="text-3xl font-bold text-white mb-6 text-center">Create Account</h2>
-        <form id="signupForm" class="space-y-4">
-          <div>
-            <label class="block text-white mb-2">Name</label>
-            <input type="text" id="signupName" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white" required>
-          </div>
-          <div>
-            <label class="block text-white mb-2">Email</label>
-            <input type="email" id="signupEmail" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white" required>
-          </div>
-          <div>
-            <label class="block text-white mb-2">Password</label>
-            <input type="password" id="signupPassword" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white" required>
-          </div>
-          <button type="submit" class="w-full bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transition">Sign Up</button>
-        </form>
-        <p class="text-white text-center mt-4">
-          Already have an account? 
-          <a href="#" onclick="togglePage('login')" class="text-blue-300 hover:text-blue-400">Login</a>
-        </p>
-      </div>
-    </div>
+     <div  id="signupPage" class="hidden">
+       <div class="min-h-screen flex items-center justify-center">
+         <div class="glass-effect p-8 rounded-lg shadow-xl w-full max-w-md">
+           <h2 class="text-3xl font-bold text-white mb-6 text-center">Create Account</h2>
+           <form id="signupForm" class="space-y-4">
+             <div>
+               <label class="block text-white mb-2">Name</label>
+               <input type="text" id="signupName" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white" required>
+             </div>
+             <div>
+               <label class="block text-white mb-2">Email</label>
+               <input type="email" id="signupEmail" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white" required>
+             </div>
+             <div>
+               <label class="block text-white mb-2">Password</label>
+               <input type="password" id="signupPassword" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white" required>
+             </div>
+             <button type="submit" class="w-full bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transition">Sign Up</button>
+           </form>
+           <p class="text-white text-center mt-4">
+             Already have an account? 
+             <a href="#" onclick="togglePage('login')" class="text-blue-300 hover:text-blue-400">Login</a>
+           </p>
+         </div>
+       </div>
+     </div>
   </div>
 
 <script src="account.js"></script>
